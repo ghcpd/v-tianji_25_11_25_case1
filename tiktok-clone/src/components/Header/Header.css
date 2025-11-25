@@ -1,0 +1,79 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+  padding: 0 16px;
+}
+
+.nav-tabs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-tab {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 4px;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-tab:hover {
+  color: white;
+}
+
+.nav-tab.active {
+  color: white;
+}
+
+.nav-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+.nav-divider {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+}
+
+.search-btn {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.search-btn:hover {
+  transform: scale(1.1);
+}
+
+.search-btn svg {
+  width: 24px;
+  height: 24px;
+}
