@@ -1,0 +1,8 @@
+.video-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  gap: 0;
+}
+
