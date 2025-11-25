@@ -1,0 +1,60 @@
+Built a TikTok-style vertical rail experience with smooth scroll/keyboard/touch navigation, inline HUD controls, and bold styling in tiktok-ui/src/App.tsx and tiktok-ui/src/App.css. Added curated clip data and local sample media (public/media/flower.mp4, posters via src/data/videos.ts), plus reusable VideoCard for autoplay/pause, likes, mute toggle, progress, and action stats. Wired global styles, Google font import, and test harness (vite.config.ts, src/setupTests.ts, src/__tests__/*) covering component actions and an end-to-end interaction flow.
+
+Tests and runs:
+
+npm run build
+npm run test (Vitest + coverage: ~88% statements)
+node node_modules/vite/bin/vite.js dev --host --port 4173 --clearScreen false (server reported ready on http://localhost:4173/; stopped after log capture)
+If you want more realism next: 1) swap in multiple distinct MP4s, 2) tune coverage toward 100% (e.g., main.tsx entry), 3) hook data to a live feed/API.
+
+11 files changed
++954
+-104
+
+Undo
+
+View all changes
+index.html
++7
+-1
+
+package.json
++11
+-2
+
+App.css
++474
+-25
+
+App.tsx
++161
+-26
+
+app.e2e.test.tsx
++30
+-0
+
+videoCard.test.tsx
++31
+-0
+
+VideoCard.tsx
++141
+-0
+
+videos.ts
++62
+-0
+
+index.css
++15
+-49
+
+setupTests.ts
++12
+-0
+
+vite.config.ts
++10
+-1
+
